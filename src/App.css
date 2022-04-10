@@ -1,38 +1,132 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+	text-align: center;
+	background: #17181b;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+	/* background-color: #282c34; */
+	height: 70px;
+	display: flex;
+	/* flex-direction: column; */
+	align-items: center;
+	justify-content: space-between;
+	font-size: calc(10px + 2vmin);
+	color: white;
+	padding: 20px;
+	cursor: pointer;
+	background-color: #04070b;
 }
 
-.App-link {
-  color: #61dafb;
+.spinner {
+	height: 80px;
+	margin: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-intro {
+	font-size: large;
+	color: white;
+}
+
+/* new css for movie component */
+
+* {
+	box-sizing: border-box;
+}
+
+.movies {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.App-header h2 {
+	margin: 0;
+}
+
+.add-movies {
+	text-align: center;
+}
+
+.add-movies button {
+	font-size: 16px;
+	padding: 8px;
+	margin: 0 10px 30px 10px;
+}
+
+.movie {
+	padding: 5px 35px 10px 35px;
+	max-width: 25%;
+}
+
+.movie img {
+	max-height: 296px;
+	min-height: 295px;
+}
+
+.movie h2 {
+	font-size: 18px;
+	color: white;
+	margin-bottom: 13px;
+}
+
+.errorMessage {
+	margin: auto;
+	font-weight: bold;
+	color: rgb(161, 15, 15);
+}
+.movies_display {
+	margin-bottom: 13px;
+	background-color:white ;
+	padding-right: 40px;
+}
+
+.search {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	/* margin-top: 38px; */
+}
+
+input[type="submit"] {
+	padding: 5px;
+	/* background-color: transparent;
+	color: black; */
+	border: 1px solid black;
+	width: 80px;
+	margin-left: 5px;
+	cursor: pointer;
+	background-color: #282c34;
+	color: antiquewhite;
+}
+
+input[type="submit"]:hover {
+	background-color: #282c34;
+	color: antiquewhite;
+}
+
+.search > input[type="text"] {
+	width: 40%;
+	min-width: 228px;
+	padding: 4px;
+}
+
+@media screen and (min-width: 694px) and (max-width: 915px) {
+	.movie {
+		max-width: 33%;
+	}
+}
+
+@media screen and (min-width: 652px) and (max-width: 693px) {
+	.movie {
+		max-width: 50%;
+	}
+}
+
+@media screen and (max-width: 651px) {
+	.movie {
+		max-width: 100%;
+		margin: auto;
+	}
 }
